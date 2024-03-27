@@ -1,0 +1,65 @@
+/* CSS */
+input[type="radio"] {
+  /* Hide the default radio button */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* Define the size of the custom radio button */
+  width: 23px;
+  height: 23px;
+  /* Define the appearance of the custom radio button */
+  border: 2px solid #161616; /* black border */
+  border-radius: 50%; /* circle */
+  outline: none; /* remove focus outline */
+}
+/* Define the appearance of the custom radio button when checked */
+input[type="radio"]:checked {
+  background-color: white; /* black background when checked */
+  border: 7px solid #161616; /* black border */
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 3px solid #756c6c;
+  border-radius: 5px;
+  width: 45px;
+  height: 25px;
+}
+input[type="checkbox"]:checked {
+  background-color: #2e2c2c; /* black background when checked */
+  border: 3px solid rgb(133, 131, 131);
+  border-radius: 5px;
+}
+
+.custom-checkbox:checked::after {
+  font-family: "Font Awesome 5 Free"; /* Assuming you are using Font Awesome 5 */
+  content: "\f00c"; /* Unicode for the check icon */
+  color: #ffffff; /* Color of the tick icon */
+  font-size: 18px; /* Adjust the size of the icon */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* loading circal  */
+
+.loader {
+  border: 4px solid rgba(82, 77, 77, 0.1);
+  border-top: 3px solid rgb(110, 110, 110); /* Change color as desired */
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
