@@ -41,13 +41,13 @@ const SignUp = () => {
         <p className="text-white">&copy; Typeform</p>
       </section>
       {/* Rigth Sectin  */}
-      <section className="bg-white w-full lg:rounded-l-[22px]    ">
-        <div className="flex justify-between p-3  font-base relative">
+      <section className="bg-white w-full lg:rounded-l-[22px]  px-4   ">
+        <div className="flex justify-between p-3   font-base relative">
           {/* lagauge changer */}
           <button
             id="dropdownDefaultButton"
             data-dropdown-toggle="dropdown"
-            className="text-gray-800 bg-white text-lg max-md:text-sm  border-gray-400 rounded py-2 px-4 leading-tight focus:outline-none  "
+            className="text-gray-800 bg-white text-lg max-md:text-sm flex flex-nowrap items-center  border-gray-400 rounded py-2 px-4 leading-tight focus:outline-none  "
             onClick={() => setShowLanguageDropdown(!showLanguageDropdown)}
             type="button"
           >
@@ -108,19 +108,18 @@ const SignUp = () => {
         </div>
 
         {/* sign up section */}
-        <div className="flex flex-col gap-3 justify-self-center  pt-32   max-sm:p-16  ">
+        <div className="flex flex-col gap-3 justify-self-center  pt-32   ">
           <div>
             <div className="flex flex-col items-center justify-center gap-9 mx-auto    ">
-              <h2 className="text-3xl text-gray-900 font-bold ">
+              <h2 className="text-3xl text-gray-900 font-bold flex   flex-nowrap items-center justify-center ">
                 <FaVideo
                   size={40}
-                  className="inline-block "
+                  className="inline-block mr-2 mt-1 "
                   style={{ transform: "scaleX(-1)" }}
-                />{" "}
-                Typeform
+                />Typeform
               </h2>
 
-              <h6 className="lg:text-3xl text-2xl  font-thin  text-gray-700  text-center  lg:w-[76%] ">
+              <h6 className="lg:text-3xl md:text-3xl text-2xl  font-thin  text-gray-700  text-center  lg:w-[76%] ">
                 {t(
                   "Get better data with conversational forms, surveys, quizzes & more"
                 )}
@@ -136,9 +135,9 @@ const SignUp = () => {
                       <EmailSignUpValidation />
                     </div>
                   ) : (
-                    <div className="space-y-4 ">
+                    <div className="space-y-4  p-20">
                       <button
-                        className="p-2 border border-gray-700 gap-4 text-xl font-semibold w-[350px] rounded-xl flex items-center justify-start"
+                        className="p-2 border border-gray-700 gap-4 text-xl font-semibold  lg:w-[350px] max-lg:w-[300px] rounded-xl flex items-center justify-start"
                         onClick={() => {
                           window.open(
                             "https://accounts.google.com/signup",
@@ -151,7 +150,7 @@ const SignUp = () => {
                       </button>
 
                       <button
-                        className="pl-1 w-[350px] border border-gray-700 text-xl font-semibold gap-5 rounded-xl flex items-center justify-start"
+                        className="pl-1 lg:w-[350px] max-lg:w-[300px] border border-gray-700 text-xl font-semibold gap-5 rounded-xl flex items-center justify-start"
                         onClick={() => {
                           window.open("https://signup.live.com/", "_blank");
                         }}
@@ -175,7 +174,7 @@ const SignUp = () => {
                         OR
                       </span>
                       <button
-                        className="bg-gray-900 hover:bg-gray-800 p-3 text-white text-xl font-semibold w-[350px] rounded-xl"
+                        className="bg-gray-900 hover:bg-gray-800 p-3 text-white text-xl font-semibold lg:w-[350px] max-lg:w-[300px] rounded-xl"
                         onClick={handleEmailSignUpClick}
                       >
                         {t("Sign up with Email")}
