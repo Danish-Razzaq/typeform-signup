@@ -1,8 +1,32 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Typeform Sign Up Page
 
-Currently, two official plugins are available:
+This project aims to create a simple yet visually appealing sign-up page inspired by Typeform's design. It utilizes React for building the UI components and Tailwind CSS for styling. Vite is used as the build tool to set up a fast and optimized development environment.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+
+- Responsive design suitable for various screen sizes
+- Sign-up options with Google, Microsoft, and email
+- Language selection dropdown
+- Loader animation during sign-up process
+- Validation for email sign-up
+
+## Technologies Used
+
+- React: A JavaScript library for building user interfaces
+- Tailwind CSS: A utility-first CSS framework for rapid UI development
+- Vite: A next-generation frontend tooling system for React projects
+- React-i18next: Internationalization support for React applications
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js and npm installed on your machine
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Danish-Razzaq/typeform-signup
