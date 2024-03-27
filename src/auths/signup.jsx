@@ -132,7 +132,7 @@ const SignUp = () => {
               ) : (
                 <>
                   {showEmailPassword ? (
-                    <div className="flex flex-col items-center max-md:-ml-3">
+                    <div className="flex flex-col items-center max-md:-ml-6">
                       <EmailSignUpValidation />
                     </div>
                   ) : (
