@@ -97,10 +97,10 @@ const SignUp = () => {
               </ul>
             </div>
           )}
-          <span className="flex gap-2 max-sm:gap-1  items-center ">
-            <h4 className="text-gray-800 flex-nowrap max-md:text-sm ">
+          <span className="flex gap-2 max-sm:gap-1  items-center  ">
+            <p className="text-gray-800 flex  text-center max-sm:-mr-4  justify-endflex-nowrap max-sm:text-sm ">
               {t("Already have an account?")}
-            </h4>
+            </p>
             <button className="bg-white border-gray-700 border py-1 px-4 rounded-xl ">
               Login
             </button>
@@ -116,10 +116,11 @@ const SignUp = () => {
                   size={40}
                   className="inline-block mr-2 mt-1 "
                   style={{ transform: "scaleX(-1)" }}
-                />Typeform
+                />
+                Typeform
               </h2>
 
-              <h6 className="lg:text-3xl md:text-3xl text-2xl  font-thin  text-gray-700  text-center  lg:w-[76%] ">
+              <h6 className="lg:text-3xl md:text-3xl text-2xl  font-thin  text-gray-700  text-center max-lg:px-12  lg:w-[76%] ">
                 {t(
                   "Get better data with conversational forms, surveys, quizzes & more"
                 )}
@@ -135,7 +136,7 @@ const SignUp = () => {
                       <EmailSignUpValidation />
                     </div>
                   ) : (
-                    <div className="space-y-4  p-20">
+                    <div className="space-y-4  ">
                       <button
                         className="p-2 border border-gray-700 gap-4 text-xl font-semibold  lg:w-[350px] max-lg:w-[300px] rounded-xl flex items-center justify-start"
                         onClick={() => {
