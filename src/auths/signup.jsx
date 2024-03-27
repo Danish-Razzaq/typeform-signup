@@ -41,8 +41,8 @@ const SignUp = () => {
         <p className="text-white">&copy; Typeform</p>
       </section>
       {/* Rigth Sectin  */}
-      <section className="bg-white w-full lg:rounded-l-[22px]  px-4   ">
-        <div className="flex justify-between p-3   font-base relative">
+      <section className="bg-white w-full lg:rounded-l-[22px]  px-4 max-sm:px-1   ">
+        <div className="flex justify-between p-3 max-sm:p-1   font-base relative">
           {/* lagauge changer */}
           <button
             id="dropdownDefaultButton"
@@ -97,7 +97,7 @@ const SignUp = () => {
               </ul>
             </div>
           )}
-          <span className="flex gap-2 items-center ">
+          <span className="flex gap-2 max-sm:gap-1  items-center ">
             <h4 className="text-gray-800 flex-nowrap max-md:text-sm ">
               {t("Already have an account?")}
             </h4>
