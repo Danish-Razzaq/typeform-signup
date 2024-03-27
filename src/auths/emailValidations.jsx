@@ -99,16 +99,16 @@ const EmailSignUpValidation = () => {
               value={email}
               onChange={handleEmailChange}
               placeholder="Email"
-              className="border border-gray-400 p-2 rounded-md mt-3 w-[350px]"
+              className="border border-gray-400 p-2 rounded-md mt-3 lg:w-[350px] max-lg:w-[300px]"
             />
             {emailError && <div className="text-red-500">{emailError}</div>}
-            <div className="relative mt-3 w-[350px]">
+            <div className="relative mt-3 lg:w-[350px] max-lg:w-[300px]">
               <input
                 type={showPassword ? "text" : "password"}
                 value={password}
                 onChange={handlePasswordChange}
                 placeholder="Password"
-                className="border border-gray-400 p-2 rounded-md w-[350px] pr-10" // Adjusting paddingRight for icon
+                className="border border-gray-400 p-2 rounded-md lg:w-[350px] max-lg:w-[300px] pr-10" // Adjusting paddingRight for icon
               />
               <button
                 onClick={togglePasswordVisibility}
@@ -150,7 +150,7 @@ const EmailSignUpValidation = () => {
 
               <button
                 onClick={toggleOptions}
-                className="to-gray-700 focus:outline-none mb-2 flex text-lg justify-between px-2 w-[350px]"
+                className="to-gray-700 focus:outline-none mb-2 flex text-lg justify-between px-2 lg:w-[350px] max-lg:w-[300px]"
               >
                 See options{" "}
                 {expandOptions ? (
@@ -309,7 +309,7 @@ const EmailSignUpValidation = () => {
             </div>
             <button
               onClick={handleCreateAccountClick}
-              className="bg-gray-900 hover:bg-gray-800 text-white text-xl font-semibold w-[350px] py-3 rounded-xl mt-3"
+              className="bg-gray-900 hover:bg-gray-800 text-white text-xl font-semibold w-[350px]  max-lg:w-[300px] py-3 rounded-xl mt-3"
             >
               Create my account
             </button>
@@ -330,7 +330,7 @@ const EmailSignUpValidation = () => {
               </p>
             </div>
             <button
-              className="bg-gray-900 mt-8  hover:bg-gray-800 w-[350px] text-white text-xl font-semibold py-3 rounded-xl"
+              className="bg-gray-900 mt-8  hover:bg-gray-800 lg:w-[350px] max-lg:w-[300px] text-white text-xl font-semibold py-3 rounded-xl"
               onClick={() => {
                 window.location.href =
                   "mailto:recipient@example.com?subject=Subject&body=Body";
