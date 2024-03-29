@@ -97,11 +97,11 @@ const SignUp = () => {
               </ul>
             </div>
           )}
-          <span className="flex gap-2 max-sm:gap-1  items-center  ">
-            <p className="text-gray-800 flex  text-center max-xsm::-mr-2  justify-endflex-nowrap max-sm:text-sm ">
+          <span className="flex gap-2  max-xsm:gap-5   items-center  ">
+            <p className="text-gray-800 flex  text-center max-xsm:-mr-2 text-lg max-xsm:text-sm justify-endflex-nowrap   max-sm:text-end">
               {t("Already have an account?")}
             </p>
-            <button className="bg-white border-gray-700 border py-1 px-4 rounded-lg lg:mr-2">
+            <button className="bg-white border-gray-700 border py-1 max-md:py-0  px-4 max-md:px-2 rounded-lg l">
               Login
             </button>
           </span>
