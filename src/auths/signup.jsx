@@ -42,7 +42,7 @@ const SignUp = () => {
       </section>
       {/* Rigth Sectin  */}
       <div className="bg-white lg:rounded-l-2xl xl:w-[63%]">
-        <div className="flex justify-between p-3 max-sm:p-1   font-base relative">
+        <div className="flex justify-between p-3 pr-6 max-md:pr-2 max-sm:p-1   font-base relative">
           {/* lagauge changer */}
           <button
             id="dropdownDefaultButton"
