@@ -32,7 +32,7 @@ const SignUp = () => {
   return (
     <main className="bg-[#0f0f0ff1] flex min-h-screen">
       {/* Left sectin  */}
-      <section className="flex items-center pt-[5%] flex-col gap-12  max-lg:hidden w-[80%]">
+      <section className="flex items-center pt-[5%] flex-col gap-12  max-lg:hidden w-[50%]">
         <h1 className="text-[40px]  font-semibold text-white mt-10 w-1/2   text-center">
           <span className="block">{t("Sign up")}</span>
           {t("and come on in")}
@@ -41,7 +41,7 @@ const SignUp = () => {
         <p className="text-white">&copy; Typeform</p>
       </section>
       {/* Rigth Sectin  */}
-      <section className="bg-white w-full lg:rounded-l-[22px]  px-4 max-sm:px-1   ">
+      <div className="bg-white lg:rounded-l-2xl xl:w-[63%]">
         <div className="flex justify-between p-3 max-sm:p-1   font-base relative">
           {/* lagauge changer */}
           <button
@@ -73,7 +73,7 @@ const SignUp = () => {
             </svg>
           </button>
           {showLanguageDropdown && (
-            <div className="absolute z-10 transition-opacity duration-300 delay-100 opacity-100 transform origin-bottom-left top-16 left-8 bg-white divide-y divide-gray-100 rounded-lg shadow-lg w-32">
+            <div className="absolute z-10 transition-opacity duration-300 delay-100 opacity-100 transform origin-bottom-left top-12 left-6 bg-white divide-y divide-gray-100 rounded-lg shadow-lg w-32">
               <ul
                 className="py-5  text-gray-700"
                 aria-labelledby="dropdownDefaultButton"
@@ -98,18 +98,19 @@ const SignUp = () => {
             </div>
           )}
           <span className="flex gap-2 max-sm:gap-1  items-center  ">
-            <p className="text-gray-800 flex  text-center max-sm:-mr-4  justify-endflex-nowrap max-sm:text-sm ">
+            <p className="text-gray-800 flex  text-center max-xsm::-mr-2  justify-endflex-nowrap max-sm:text-sm ">
               {t("Already have an account?")}
             </p>
-            <button className="bg-white border-gray-700 border py-1 px-4 rounded-xl ">
+            <button className="bg-white border-gray-700 border py-1 px-4 rounded-lg lg:mr-2">
               Login
             </button>
           </span>
         </div>
 
-        {/* sign up section */}
-        <div className="flex flex-col gap-3 justify-self-center  pt-32   ">
-          <div>
+        <section className="  flex justify-center items-center     ">
+          {/* sign up section */}
+          <div className="flex flex-col gap-3 justify-self-center  pt-32   ">
+            {/* <div> */}
             <div className="flex flex-col items-center justify-center gap-9 mx-auto    ">
               <h2 className="text-3xl text-gray-900 font-bold flex   flex-nowrap items-center justify-center ">
                 <FaVideo
@@ -120,19 +121,19 @@ const SignUp = () => {
                 Typeform
               </h2>
 
-              <h6 className="lg:text-3xl md:text-3xl text-2xl  font-thin  text-gray-700  text-center max-lg:px-12  lg:w-[76%] ">
+              <h6 className="lg:text-3xl md:text-3xl text-2xl   text-gray-500  text-center max-lg:px-12 max-md:px-5 max-md:text-xl  lg:w-[76%] ">
                 {t(
                   "Get better data with conversational forms, surveys, quizzes & more"
                 )}
               </h6>
               {showLoader ? (
-                <div className="flex justify-center items-center">
+                <div className="flex justify-center mx-auto w-full items-center">
                   <div className="loader"></div>
                 </div>
               ) : (
                 <>
                   {showEmailPassword ? (
-                    <div className="flex flex-col -mt-6 items-center max-md:-ml-7">
+                    <div className="flex flex-col justify-center items-center ">
                       <EmailSignUpValidation />
                     </div>
                   ) : (
@@ -185,9 +186,10 @@ const SignUp = () => {
                 </>
               )}
             </div>
+            {/* </div> */}
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
   );
 };

@@ -11,7 +11,7 @@ const EmailSignUpValidation = () => {
   const [expandOptions, setExpandOptions] = useState(false);
   const [selectedOptions, setSelectedOptions] = useState({
     usefulTips: "Yes",
-    tailorTypeform: "Yes",
+    tailorTypeform: "No",
     enrichData: "Yes",
   });
   const [emailError, setEmailError] = useState("");
@@ -76,6 +76,11 @@ const EmailSignUpValidation = () => {
 
   const handleTermsAgreement = () => {
     setAgreeToTerms(!agreeToTerms);
+    setSelectedOptions({
+      usefulTips: "Yes",
+      tailorTypeform: "Yes",
+      enrichData: "Yes",
+    })
   };
 
   const toggleOptions = () => {
@@ -91,7 +96,7 @@ const EmailSignUpValidation = () => {
 
   return (
     <div className="flex flex-col justify-center items-center ">
-      <div className="w-full max-w-[50%] mb-10">
+      <div className=" flex justify-center items-center flex-col  mb-10 px-2">
         {!accountCreated && (
           <>
             <input
@@ -121,14 +126,14 @@ const EmailSignUpValidation = () => {
             {passwordError && (
               <div className="text-red-500">{passwordError}</div>
             )}
-            <div className="flex  mt-3">
+            <div className="flex justify-center items-start  mt-3">
               <input
                 type="checkbox"
                 checked={agreeToTerms}
                 onChange={handleTermsAgreement}
                 className="mr-2 mt-1 custom-checkbox"
               />
-              <div className="max-sm:w-[450px] text-gray-600">
+              <div className="max-sm:w-[250px] max-md:text-sm md:w-[270px] xl:w-[310px max-md:w-[260px] text-gray-600">
                 I agree to Typeform’s{" "}
                 <span className="underline cursor-pointer">
                   {" "}
@@ -145,12 +150,12 @@ const EmailSignUpValidation = () => {
                 .
               </div>
             </div>
-            <div className="flex flex-col items-start mt-3">
+            <div className="flex flex-col items-center justify-center mt-3">
               {/* <span> */}
 
               <button
                 onClick={toggleOptions}
-                className="to-gray-700 focus:outline-none mb-2 flex text-lg justify-between px-2 lg:w-[350px] max-lg:w-[300px]"
+                className="to-gray-700 focus:outline-none mb-2 flex text-lg justify-between px-2 lg:w-[350px] max-lg:w-[300px] max-md:w-[310px] "
               >
                 See options{" "}
                 {expandOptions ? (
@@ -161,8 +166,8 @@ const EmailSignUpValidation = () => {
               </button>
 
               {expandOptions && (
-                <div className="flex flex-col pl-4 ">
-                  <div className="mb-4 ">
+                <div className="flex flex-col pl-4 space-y-1 justify-center max-sm:w-[310px] max-sm:text-sm w-[310px] xl:w-[310px] ">
+                  <div className="mb-4 space-y-2 ">
                     <h3 className="text-lg text-gray-800 ">
                       Get useful tips, inspiration, and offers via
                       e-communication.
@@ -206,7 +211,7 @@ const EmailSignUpValidation = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="mb-4">
+                  <div className="mb-4 space-y-2">
                     <h3 className="text-lg text-gray-800">
                       Tailor Typeform to my needs based on my activity.See
                       Privacy Policy
@@ -316,8 +321,8 @@ const EmailSignUpValidation = () => {
           </>
         )}
         {accountCreated && (
-          <div className="gap-y-14 -ml-14">
-            <div className="w-[150%]  flex gap-8">
+          <div className=" flex justify-center items-center flex-col w-full text-start   ">
+            <div className="flex items-center ml-2 justify-center gap-8">
               <p className="text-xl  font-semibold  text-gray-600">
                 We sent an email to{" "}
                 <span className="font-bold block my-2 text-gray-950">
@@ -330,7 +335,7 @@ const EmailSignUpValidation = () => {
               </p>
             </div>
             <button
-              className="bg-gray-900 mt-8  hover:bg-gray-800 lg:w-[350px] max-lg:w-[300px] text-white text-xl font-semibold py-3 rounded-xl"
+              className="bg-gray-900 mt-8  hover:bg-gray-800  w-full  flex justify-center items-center text-white text-xl font-semibold py-3 rounded-xl"
               onClick={() => {
                 window.location.href =
                   "mailto:recipient@example.com?subject=Subject&body=Body";
